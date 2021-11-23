@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokedex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+     <audio id="music" src="./media/music.mpeg" autoplay loop></audio>
+    <div id="searchBox">
+        <div id="searchBoxInput">
+            <input id="search" type="search" placeholder="Buscar" >
+            <button onclick="searchPokemon()"><img src="./media/search.svg" alt="iconsearch"></button>
+        </div>
+        <img src="./media/buscador.jpg" alt="">
+    </div>
+    <div class="container">
+        <header>
+            <div class="title">
+                <img src="./media/pokeball.png" alt="pokeball">
+                <h5>POKÉDEX_</h5>
+            </div>
+        </header>
+        <main>
+            <div class="main-header">
+                <div class="main-header-title">
+                    <div class="element" id="element"></div>
+                    <h3 class="main-title" id="main-title"></h3>
+                </div>
+                <img class="pokemonMain" id="pokemonMain" src="" alt="pokemonImg">
+            </div>
+            <div id="main-statistic" class="main-statistic">
+                
+            </div>
+        </main>
+        <footer>
+            <h4>OTHERS</h4>
+            <div id="others" class="list-pokemon">
+
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="./logic.js"></script>
+</body>
+</html>

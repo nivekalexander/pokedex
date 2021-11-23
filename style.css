@@ -1,0 +1,361 @@
+body{
+    margin: auto;
+    background: url(./media/estadio.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+    background-color: rgb(226, 226, 226);
+    font-family:sans-serif;
+}
+#searchBox{
+    right: 0;
+    position: fixed;
+    justify-content: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+}
+#search {
+    min-height: 10px;
+    max-height: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 0px rgb(255, 255, 255);
+    padding-left: 3%;
+    
+}
+#searchBox img{
+    min-width: 50px;
+    max-width: 60px;
+}
+
+#searchBox:hover> #searchBoxInput {
+    visibility:visible;
+    min-height: 10px;
+    max-height: 30px;
+}
+#searchBoxInput{
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+}
+#searchBox:hover > #searchBoxInput{
+    transform: translate(-5px,0);
+    -webkit-transform: translate(-5px,0); /** Safari & Chrome **/
+    -o-transform: translate(-5px,0); /** Opera **/
+    -moz-transform: translate(-5px,0); /** Firefox **/
+}
+#searchBoxInput button{
+    border: 0px rgb(255, 255, 255);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 10px;
+    max-height: 28px;
+    
+}
+#searchBoxInput button img{
+    min-height: 10px;
+    max-height: 28px;   
+    min-width: 10px;
+    max-width: 28px;
+}
+.container{
+    border: 2px solid rgba(167, 4, 4, 0.712);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background:rgba(107, 107, 107, 0.521);
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+}
+header{
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: rgba(167, 4, 4, 0.712);
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1%;
+}
+.title h5{
+    margin-left: 10%;
+}
+header .title img{
+    height: 25px;
+    width: 25px;
+}
+.element .iconElement{
+    margin-right: 10px; 
+    height: 25px;
+    width: 25px;
+     
+}
+.iconElement{
+    margin-right: 10px; 
+    height: 25px;
+    width: 25px;
+     
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 2%;
+}
+.main-header{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.main-header .pokemonMain{
+    width: 50%;
+   height: 100%;
+   z-index: 5;
+   
+    
+}
+.main-header-title{
+    
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.712);
+    
+    box-shadow: 10px 10px 15px rgb(0 0 0 / 50%);
+    margin-bottom: 5%;
+    padding: 1% 8% 1% 8%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+header h5 {
+    margin:0px;
+}
+.main-header-title h3{
+    margin:0px;
+}
+.main-statistic{
+    font-size: larger;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    background-color: rgba(255, 255, 255, 0.712);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.main-statistic div > p{
+    width: 50%;
+    padding-left: 10%;
+    margin:5% 0% 5% 0%;
+}
+footer{
+    width: 100%;
+    
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    background-color: rgba(255, 255, 255, 0.712);
+    margin-top: 2%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content:end;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    
+}
+
+.list-pokemon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 2%;  
+}
+
+.list-pokemon  .pokemon-item{
+    
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    background-color: rgba(236, 236, 236, 0.507);
+    border: 1px solid rgba(0, 0, 0, 0.664);
+    margin-bottom: 2%;
+    width: 80px;
+    height: 80px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.list-pokemon  .pokemon-item:hover{
+    background-color: rgba(180, 180, 180, 0.699);
+}
+
+.list-pokemon  .pokemon-item img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+@media only screen and (min-width:821px) and (max-width:4000px){
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 20px;
+    
+}
+header{
+    
+    padding: 1% 0% 1% 0%;
+}
+.main-statistic{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+.main-statistic > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.main-header .pokemonMain{
+        
+        max-width: 517px;
+        max-height: 405px;
+        min-width: 273px;
+        min-height: 347px;
+      
+    }
+    .main-statistic div > p{
+        width: auto;
+        padding-left: 10%;
+        margin:5% 0% 5% 0%;
+    }
+}
+@media only screen and (min-width:680px) and (max-width:820px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-bottom: 20px;
+        border: 1px solid #C00;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .main-header .pokemonMain{
+        
+        max-width: 273px;
+        max-height: 347px;
+      
+    }
+    header{
+        padding: 1% 0% 1% 0%;
+    }   
+    .main-statistic{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        padding-top: 30px;
+    }
+    .main-statistic > div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+@media only screen and (min-width:1px) and (max-width:679px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-left: 4%;
+        margin-right: 4%;
+        margin-bottom: 20px;
+        align-items: center;
+        border: 1px solid #C00;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    header{
+        justify-content: center;
+        padding: 3% 0% 3% 0%;
+    }
+    main{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-header{
+        width: 100%;
+        
+    }
+    .main-header .pokemonMain{
+        width: 100%;
+        max-width: 273px;
+        max-height: 347px;
+        max-width: 273px;
+        max-height: 347px;
+      
+    }
+    .main-header-title{
+        width: 100%;
+        margin-top: 5%;
+        padding: 3% 0% 3% 0%;
+    }
+    .main-statistic{
+        display: flex;
+        flex-direction: column;
+        margin-top: -50px;
+        padding-top: 50px;
+    }
+    .main-statistic > div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer{
+        margin-top: 6%;
+        flex-direction: column;
+        display: flex;
+    }
+    .list-pokemon{
+ 
+        justify-content: space-between;
+       
+    }
+    .list-pokemon  .pokemon-item{
+        margin-bottom: 5%;
+        margin-right: 5%;
+    }   
+}
