@@ -41,27 +41,27 @@ async function pokemonDataApi(search){
 
             HTMLPokemonStatistic.innerHTML=`
             <div class="num-pokemon">
-                <p>No.</p>
-                <p>${pokemon.id}</p>
+                <p><b>No.</b></p>
+                <p>${pokemon.id}</b></p>
             </div>
             <div class="level-pokemon">
-                <p>Level</p>
+                <p><b>Level</b></p>
                 <p>${pokemon.base_experience}</p>
             </div>
             <div class="type-pokemon">
-                <p>Type</p>
+                <p><b>Type</b></p>
                 <p>${pokemon.types[0].type.name[0].toUpperCase()+ pokemon.types[0].type.name.slice(1)}</p>
             </div>
             <div class="hability-pokemon">
-                <p>Hability</p>
+                <p><b>Hability</b></p>
                 <p>${pokemon.abilities[0].ability.name[0].toUpperCase() + pokemon.abilities[0].ability.name.slice(1)}</p>
             </div>
             <div class="height-pokemon">
-                <p>Height</p>
+                <p><b>Height</b></p>
                 <p>${pokemon.height} m</p>
             </div>
             <div class="weight-pokemon">
-                <p>Weight</p>
+                <p><b>Weight</b></p>
                 <p>${pokemon.weight} Kg</p>
             </div>`
         }).catch((error) => {

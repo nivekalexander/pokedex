@@ -9,38 +9,40 @@
 </head>
 <body>
    
-     <audio id="music" src="./media/music.mpeg" autoplay loop></audio>
-    <div id="searchBox">
+    <audio id="music" src="./media/music.mpeg" autoplay loop></audio>
+
+    <aside id="searchBox">
         <div id="searchBoxInput">
             <input id="search" type="search" placeholder="Buscar" >
             <button onclick="searchPokemon()"><img src="./media/search.svg" alt="iconsearch"></button>
         </div>
         <img src="./media/buscador.jpg" alt="">
-    </div>
+    </aside>
+
     <div class="container">
         <header>
-            <div class="title">
+            <figure class="title">
                 <img src="./media/pokeball.png" alt="pokeball">
-                <h5>POKÉDEX_</h5>
-            </div>
+                <figcaption class="title--text">POKÉDEX_</figcaption>
+            </figure>
         </header>
         <main>
-            <div class="main-header">
+            <section class="main-header">
                 <div class="main-header-title">
-                    <div class="element" id="element"></div>
-                    <h3 class="main-title" id="main-title"></h3>
+                    <figure class="element" id="element"></figure>
+                    <figcaption class="main-title" id="main-title"></figcaption>
                 </div>
                 <img class="pokemonMain" id="pokemonMain" src="" alt="pokemonImg">
-            </div>
-            <div id="main-statistic" class="main-statistic">
+            </section>
+            <section id="main-statistic" class="main-statistic">
                 
-            </div>
+            </section>
         </main>
         <footer>
             <h4>OTHERS</h4>
-            <div id="others" class="list-pokemon">
+            <article id="others" class="list-pokemon">
 
-            </div>
+            </article>
         </footer>
     </div>
 
