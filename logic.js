@@ -100,3 +100,4 @@ async function searchRandom(num){
     const namePokemon = await responseJson.name;
     return `https://professorlotus.com/Sprites/${namePokemon}.gif`;
 }
+
