@@ -10,7 +10,6 @@
         
         music.play();
          
-        console.log(music.volume);
     });
     
     pokemonDataApi(Math.floor(Math.random() * (492 - 1 + 1) + 1));
