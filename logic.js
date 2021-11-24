@@ -5,7 +5,10 @@
 //un audio sin previa interaccion con la pagina , para eso el listerning click
 (function(){
     document.addEventListener("click",function(){
-        document.getElementById("music").play();
+        let music=document.getElementById("music");
+        music.play();
+        music.volume=0.04;
+        console.log(music.volume);
     });
     
     pokemonDataApi(Math.floor(Math.random() * (492 - 1 + 1) + 1));
