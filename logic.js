@@ -14,10 +14,10 @@
 function searchPokemon(){
     let search=document.getElementById("search").value;
     var valoresAceptados = /^[0-9]+$/;
-    
+    document.getElementById("search").value="";
     if(parseInt(search)<493 || !search.match(valoresAceptados)){
-        document.getElementById("search").value="";
-    pokemonDataApi(search.toLowerCase())
+        
+        pokemonDataApi(search.toLowerCase())
     }else{
         window.alert("¡Ups!, aún no has registrado este pokemón");
     }
@@ -33,7 +33,7 @@ async function pokemonDataApi(search){
     const HTMLPokemonTitle=document.getElementById("main-title");
     const HTMLPokemonStatistic=document.getElementById("main-statistic");
     const other = document.getElementById("others");
-    let name="";
+    
 
     fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
     .then(function(response){
