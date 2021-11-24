@@ -28,6 +28,7 @@ function searchPokemon(){
     }
     
 }
+
 function selectPokemon(num){
     let select=document.getElementById("pokemon-item-"+num).value;
     pokemonDataApi(select);
@@ -118,3 +119,4 @@ async function searchRandom(num){
     const namePokemon = await responseJson.name;
     return `https://professorlotus.com/Sprites/${namePokemon}.gif`;
 }
+
