@@ -13,8 +13,9 @@
 }());
 function searchPokemon(){
     let search=document.getElementById("search").value;
-    if(parseInt(search)<493){
-      
+    var valoresAceptados = /^[0-9]+$/;
+    
+    if(parseInt(search)<493 || !search.match(valoresAceptados)){
         document.getElementById("search").value="";
     pokemonDataApi(search.toLowerCase())
     }else{
@@ -38,38 +39,42 @@ async function pokemonDataApi(search){
     .then(function(response){
         response.json()
         .then(function (pokemon){ 
-            HTMLPokemonTitle.innerHTML=`${pokemon.name[0].toUpperCase()+ pokemon.name.slice(1)}`;
-            HTMLPokemonElement.innerHTML="";
-            HTMLPokemonMain.src=`https://professorlotus.com/Sprites/${pokemon.name}.gif`;
-            for (let index = 0; index < pokemon.types.length; index++) {
-                HTMLPokemonElement.innerHTML+=`<img  class="iconElement" src="./media/${pokemon.types[index].type.name}.png" alt="element">`;    
-            }
+            if(pokemon.id<493){
+                HTMLPokemonTitle.innerHTML=`${pokemon.name[0].toUpperCase()+ pokemon.name.slice(1)}`;
+                HTMLPokemonElement.innerHTML="";
+                HTMLPokemonMain.src=`https://professorlotus.com/Sprites/${pokemon.name}.gif`;
+                for (let index = 0; index < pokemon.types.length; index++) {
+                    HTMLPokemonElement.innerHTML+=`<img  class="iconElement" src="./media/${pokemon.types[index].type.name}.png" alt="element">`;    
+                }
 
-            HTMLPokemonStatistic.innerHTML=`
-            <div class="num-pokemon">
-                <p><b>No.</b></p>
-                <p>${pokemon.id}</b></p>
-            </div>
-            <div class="level-pokemon">
-                <p><b>Level</b></p>
-                <p>${pokemon.base_experience}</p>
-            </div>
-            <div class="type-pokemon">
-                <p><b>Type</b></p>
-                <p>${pokemon.types[0].type.name[0].toUpperCase()+ pokemon.types[0].type.name.slice(1)}</p>
-            </div>
-            <div class="hability-pokemon">
-                <p><b>Hability</b></p>
-                <p>${pokemon.abilities[0].ability.name[0].toUpperCase() + pokemon.abilities[0].ability.name.slice(1)}</p>
-            </div>
-            <div class="height-pokemon">
-                <p><b>Height</b></p>
-                <p>${pokemon.height} m</p>
-            </div>
-            <div class="weight-pokemon">
-                <p><b>Weight</b></p>
-                <p>${pokemon.weight} Kg</p>
-            </div>`
+                HTMLPokemonStatistic.innerHTML=`
+                <div class="num-pokemon">
+                    <p><b>No.</b></p>
+                    <p>${pokemon.id}</b></p>
+                </div>
+                <div class="level-pokemon">
+                    <p><b>Level</b></p>
+                    <p>${pokemon.base_experience}</p>
+                </div>
+                <div class="type-pokemon">
+                    <p><b>Type</b></p>
+                    <p>${pokemon.types[0].type.name[0].toUpperCase()+ pokemon.types[0].type.name.slice(1)}</p>
+                </div>
+                <div class="hability-pokemon">
+                    <p><b>Hability</b></p>
+                    <p>${pokemon.abilities[0].ability.name[0].toUpperCase() + pokemon.abilities[0].ability.name.slice(1)}</p>
+                </div>
+                <div class="height-pokemon">
+                    <p><b>Height</b></p>
+                    <p>${pokemon.height} m</p>
+                </div>
+                <div class="weight-pokemon">
+                    <p><b>Weight</b></p>
+                    <p>${pokemon.weight} Kg</p>
+                </div>`
+            }else{
+                window.alert("¡Ups!, aún no has registrado este pokemón");
+            }        
         }).catch((error) => {
             window.alert("No pudimos encontrar ese pokemon :c")
           })
