@@ -46,6 +46,9 @@ async function pokemonDataApi(search){
                 HTMLPokemonTitle.innerHTML=`${pokemon.name[0].toUpperCase()+ pokemon.name.slice(1)}`;
                 HTMLPokemonElement.innerHTML="";
                 HTMLPokemonMain.src=`https://professorlotus.com/Sprites/${pokemon.name}.gif`;
+                HTMLPokemonMain.onerror = function () {
+                    this.setAttribute('src', './media/desconocido.svg');
+                }
                 for (let index = 0; index < pokemon.types.length; index++) {
                     HTMLPokemonElement.innerHTML+=`<img  class="iconElement" src="./media/${pokemon.types[index].type.name}.png" alt="element">`;    
                 }
@@ -94,16 +97,16 @@ async function pokemonDataApi(search){
 
     other.innerHTML =`
     <button onclick="selectPokemon('1')" src="" id="pokemon-item-1" class="pokemon-item" value=${other1Number}>
-    <img id="pokemon-img-1" src="${await searchRandom(other1Number)}" alt="pokemonImg">              
+    <img id="pokemon-img-1" src="${await searchRandom(other1Number)}" alt="pokemonImg" onerror="this.onerror=null;this.src='./media/desconocido.svg';">              
     </button>
     <button onclick="selectPokemon('2')" src="" id="pokemon-item-2" class="pokemon-item" value=${other2Number}>  
-    <img id="pokemon-img-2" src="${await searchRandom(other2Number)}" alt="pokemonImg"> 
+    <img id="pokemon-img-2" src="${await searchRandom(other2Number)}" alt="pokemonImg" onerror="this.onerror=null;this.src='./media/desconocido.svg';"> 
     </button>
     <button onclick="selectPokemon('3')" src="" id="pokemon-item-3" class="pokemon-item" value=${other3Number}>
-    <img id="pokemon-img-3" src="${await searchRandom(other3Number)}" alt="pokemonImg"> 
+    <img id="pokemon-img-3" src="${await searchRandom(other3Number)}" alt="pokemonImg" onerror="this.onerror=null;this.src='./media/desconocido.svg';"> 
     </button>
     <button onclick="selectPokemon('4')" src="" id="pokemon-item-4" class="pokemon-item" value=${other4Number}>
-    <img id="pokemon-img-4" src="${await searchRandom(other4Number)}" alt="pokemonImg">
+    <img id="pokemon-img-4" src="${await searchRandom(other4Number)}" alt="pokemonImg" onerror="this.onerror=null;this.src='./media/desconocido.svg';">
     </button> `;
 }
 
