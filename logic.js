@@ -4,10 +4,12 @@
 //gracias a las nuevas politicas de los navegadores ya no es posible autoreproducir 
 //un audio sin previa interaccion con la pagina , para eso el listerning click
 (function(){
+    let music=document.getElementById("music");
+    music.volume=0.04;
     document.addEventListener("click",function(){
-        let music=document.getElementById("music");
+        
         music.play();
-        music.volume=0.04;
+        
         console.log(music.volume);
     });
     
