@@ -16,6 +16,7 @@ function searchPokemon(){
     document.getElementById("search").value="";
     pokemonDataApi(search.toLowerCase())
 }
+
 function selectPokemon(num){
     let select=document.getElementById("pokemon-item-"+num).value;
     pokemonDataApi(select);
