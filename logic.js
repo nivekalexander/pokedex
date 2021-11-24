@@ -8,13 +8,19 @@
         document.getElementById("music").play();
     });
     
-    pokemonDataApi(Math.floor(Math.random() * (151 - 1 + 1) + 1));
+    pokemonDataApi(Math.floor(Math.random() * (492 - 1 + 1) + 1));
 
 }());
 function searchPokemon(){
     let search=document.getElementById("search").value;
-    document.getElementById("search").value="";
+    if(parseInt(search)<493){
+      
+        document.getElementById("search").value="";
     pokemonDataApi(search.toLowerCase())
+    }else{
+        window.alert("¡Ups!, aún no has registrado este pokemón");
+    }
+    
 }
 function selectPokemon(num){
     let select=document.getElementById("pokemon-item-"+num).value;
@@ -71,10 +77,10 @@ async function pokemonDataApi(search){
         window.alert("No pudimos encontrar ese pokemon :c")
       });
 
-    const other1Number = Math.floor(Math.random() * (38 - 1 + 1) + 1);
-    const other2Number = Math.floor(Math.random() * (75 - 38 + 1) + 38);
-    const other3Number = Math.floor(Math.random() * (112 - 75 + 1) + 75);
-    const other4Number = Math.floor(Math.random() * (151 - 112 + 1) + 112);
+    const other1Number = Math.floor(Math.random() * (123 - 1 + 1) + 1);
+    const other2Number = Math.floor(Math.random() * (246 - 123 + 1) + 123);
+    const other3Number = Math.floor(Math.random() * (369 - 246 + 1) + 246);
+    const other4Number = Math.floor(Math.random() * (492 - 369 + 1) + 369);
 
     // Validate unique Numbers
 
